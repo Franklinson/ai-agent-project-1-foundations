@@ -1,0 +1,5 @@
+agent1,success,2.5,100
+agent2,error,0.0,0
+agent3,success,1.8,95
+agent4,timeout,0.0,0
+agent5,success,3.2,150

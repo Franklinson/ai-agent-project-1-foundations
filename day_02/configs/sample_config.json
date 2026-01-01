@@ -1,0 +1,5 @@
+{
+  "agent_name": "sample_agent",
+  "environment": "development",
+  "log_level": "INFO"
+}
