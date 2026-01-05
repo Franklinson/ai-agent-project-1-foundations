@@ -1,0 +1,122 @@
+{
+  "test_results": [
+    {
+      "prompt": "What is the weather today?",
+      "selected_model": "gpt-4",
+      "complexity_score": 0
+    },
+    {
+      "prompt": "Calculate the area of a circle with radius 5",
+      "selected_model": "gpt-4",
+      "complexity_score": 1
+    },
+    {
+      "prompt": "Solve step by step: 2x + 5 = 15",
+      "selected_model": "o1-preview",
+      "complexity_score": 4
+    },
+    {
+      "prompt": "Analyze and compare the economic impacts of inflation vs deflation",
+      "selected_model": "o1-preview",
+      "complexity_score": 2
+    },
+    {
+      "prompt": "Explain why photosynthesis is important for life on Earth",
+      "selected_model": "o1-preview",
+      "complexity_score": 2
+    },
+    {
+      "prompt": "Find the derivative of x^2 + 3x + 2",
+      "selected_model": "gpt-4",
+      "complexity_score": 1
+    },
+    {
+      "prompt": "What's the capital of France?",
+      "selected_model": "gpt-4",
+      "complexity_score": 0
+    },
+    {
+      "prompt": "Prove that the square root of 2 is irrational using mathematical proof",
+      "selected_model": "o1-preview",
+      "complexity_score": 5
+    },
+    {
+      "prompt": "Evaluate the logical reasoning behind the trolley problem in ethics",
+      "selected_model": "o1-preview",
+      "complexity_score": 7
+    },
+    {
+      "prompt": "How do I make coffee?",
+      "selected_model": "gpt-4",
+      "complexity_score": 0
+    }
+  ],
+  "statistics": {
+    "total": 10,
+    "standard": 5,
+    "reasoning": 5,
+    "reasoning_percentage": 50.0
+  },
+  "model_selection_log": [
+    {
+      "prompt": "What is the weather today?",
+      "complexity_score": 0,
+      "selected_model": "gpt-4",
+      "reason": "Low complexity, standard model sufficient"
+    },
+    {
+      "prompt": "Calculate the area of a circle with radius 5",
+      "complexity_score": 1,
+      "selected_model": "gpt-4",
+      "reason": "Low complexity, standard model sufficient"
+    },
+    {
+      "prompt": "Solve step by step: 2x + 5 = 15",
+      "complexity_score": 4,
+      "selected_model": "o1-preview",
+      "reason": "High complexity detected"
+    },
+    {
+      "prompt": "Analyze and compare the economic impacts of inflation vs deflation",
+      "complexity_score": 2,
+      "selected_model": "o1-preview",
+      "reason": "Medium complexity detected"
+    },
+    {
+      "prompt": "Explain why photosynthesis is important for life on Earth",
+      "complexity_score": 2,
+      "selected_model": "o1-preview",
+      "reason": "Medium complexity detected"
+    },
+    {
+      "prompt": "Find the derivative of x^2 + 3x + 2",
+      "complexity_score": 1,
+      "selected_model": "gpt-4",
+      "reason": "Low complexity, standard model sufficient"
+    },
+    {
+      "prompt": "What's the capital of France?",
+      "complexity_score": 0,
+      "selected_model": "gpt-4",
+      "reason": "Low complexity, standard model sufficient"
+    },
+    {
+      "prompt": "Prove that the square root of 2 is irrational using mathematical proof",
+      "complexity_score": 5,
+      "selected_model": "o1-preview",
+      "reason": "High complexity detected"
+    },
+    {
+      "prompt": "Evaluate the logical reasoning behind the trolley problem in ethics",
+      "complexity_score": 7,
+      "selected_model": "o1-preview",
+      "reason": "High complexity detected"
+    },
+    {
+      "prompt": "How do I make coffee?",
+      "complexity_score": 0,
+      "selected_model": "gpt-4",
+      "reason": "Low complexity, standard model sufficient"
+    }
+  ]
+}
