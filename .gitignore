@@ -31,4 +31,4 @@ Thumbs.db
 *.log
 .pytest_cache/
 .coverage
-htmlcov/
+day_08/test_mock_vector_search.py
