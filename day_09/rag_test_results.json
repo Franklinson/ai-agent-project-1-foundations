@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What is RAG?",
+    "context": [
+      "RAG (Retrieval-Augmented Generation) combines information retrieval with text generation.",
+      "ChromaDB is an open-source vector database for AI applications.",
+      "OpenAI provides APIs for language models and embeddings."
+    ],
+    "response": "RAG (Retrieval-Augmented Generation) is a method that combines information retrieval with text generation.",
+    "context_count": 3
+  },
+  {
+    "question": "How does machine learning work?",
+    "context": [
+      "Machine learning is a subset of AI that uses algorithms to learn patterns from data.",
+      "Deep learning uses neural networks with multiple layers to process data.",
+      "Natural Language Processing (NLP) helps computers understand human language."
+    ],
+    "response": "Machine learning works by using algorithms to learn patterns from data.",
+    "context_count": 3
+  },
+  {
+    "question": "What programming language is mentioned?",
+    "context": [
+      "Python is a high-level programming language known for its simplicity and readability.",
+      "OpenAI provides APIs for language models and embeddings.",
+      "ChromaDB is an open-source vector database for AI applications."
+    ],
+    "response": "Python",
+    "context_count": 3
+  },
+  {
+    "question": "Tell me about vector databases",
+    "context": [
+      "Vector databases store high-dimensional vectors for similarity search.",
+      "ChromaDB is an open-source vector database for AI applications.",
+      "RAG (Retrieval-Augmented Generation) combines information retrieval with text generation."
+    ],
+    "response": "Vector databases are specialized databases that are designed to store high-dimensional vectors. These databases are particularly useful for performing similarity searches, which are often used in various fields such as machine learning, data analysis, and AI applications. Vector databases can manipulate large amounts of data quickly and efficiently, making them a valuable resource in handling complex data structures.",
+    "context_count": 3
+  },
+  {
+    "question": "What is deep learning?",
+    "context": [
+      "Deep learning uses neural networks with multiple layers to process data.",
+      "Machine learning is a subset of AI that uses algorithms to learn patterns from data.",
+      "Natural Language Processing (NLP) helps computers understand human language."
+    ],
+    "response": "Deep learning is a technique that uses neural networks with multiple layers to process data.",
+    "context_count": 3
+  },
+  {
+    "question": "How do I cook pasta?",
+    "context": [
+      "RAG (Retrieval-Augmented Generation) combines information retrieval with text generation.",
+      "Natural Language Processing (NLP) helps computers understand human language.",
+      "Python is a high-level programming language known for its simplicity and readability."
+    ],
+    "response": "The context doesn't contain relevant information to answer the question.",
+    "context_count": 3
+  }
+]
