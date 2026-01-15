@@ -1,0 +1,3 @@
+Text: What's science
+Tokens used: 3
+Remaining: 997
