@@ -1,0 +1,44 @@
+
+=== Prompt Iteration Workflow Report ===
+
+Total Iterations: 5
+Overall Improvement: +16.67%
+
+=== Best Version ===
+Iteration: 2 (v2)
+Success Rate: 50.0%
+Quality Score: 50.0%
+Prompt: You are an AI assistant.
+Example: For calculations, show your work.
+You must verify all responses be...
+
+=== Progress ===
+First Iteration:
+  Success Rate: 33.33%
+  Quality Score: 33.33%
+
+Last Iteration:
+  Success Rate: 50.0%
+  Quality Score: 50.0%
+
+=== Iteration Details ===
+
+Iteration 1 (v1):
+  Success: 33.33% | Quality: 33.33% | Performance: needs_improvement
+  Issues: 4 test(s) failed, calculator accuracy low (0.0%), api_call accuracy low (0.0%)
+
+Iteration 2 (v2):
+  Success: 50.0% | Quality: 50.0% | Performance: needs_improvement
+  Issues: 3 test(s) failed, calculator accuracy low (0.0%), api_call accuracy low (0.0%)
+
+Iteration 3 (v3):
+  Success: 50.0% | Quality: 50.0% | Performance: needs_improvement
+  Issues: 3 test(s) failed, calculator accuracy low (0.0%), api_call accuracy low (0.0%)
+
+Iteration 4 (v4):
+  Success: 50.0% | Quality: 50.0% | Performance: needs_improvement
+  Issues: 3 test(s) failed, calculator accuracy low (0.0%), api_call accuracy low (0.0%)
+
+Iteration 5 (v5):
+  Success: 50.0% | Quality: 50.0% | Performance: needs_improvement
+  Issues: 3 test(s) failed, calculator accuracy low (0.0%), api_call accuracy low (0.0%)

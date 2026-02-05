@@ -1,0 +1,36 @@
+
+=== A/B Test Comparison Report ===
+Test Date: 2026-02-05T18:28:37.201831
+
+Version A Prompt:
+You are a professional assistant with access to search, calculator, and API tools.
+Provide formal, d...
+
+Version B Prompt:
+You are a helpful, casual assistant with search, calculator, and API tools.
+Keep responses friendly ...
+
+=== Performance Metrics ===
+
+Version A:
+  Success Rate: 100.0%
+  Quality Score: 100.0%
+  Tests Passed: 7/7
+
+Version B:
+  Success Rate: 100.0%
+  Quality Score: 100.0%
+  Tests Passed: 7/7
+
+=== Statistical Comparison ===
+Success Rate Difference: +0.00%
+Quality Score Difference: +0.00%
+Overall Improvement: 0.00%
+
+Winner: TIE
+Confidence: LOW
+
+=== Tool Accuracy Comparison ===
+search: A=100.0% | B=100.0% | Diff=+0.00%
+calculator: A=100.0% | B=100.0% | Diff=+0.00%
+api_call: A=100.0% | B=100.0% | Diff=+0.00%

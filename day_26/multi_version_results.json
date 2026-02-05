@@ -1,0 +1,385 @@
+{
+  "ab_comparison": {
+    "version_a": {
+      "prompt": "You are an AI assistant with search and calculator tools.\nExample: For searches, provide comprehensive results.\nYou must ensure accuracy in all responses.",
+      "results": {
+        "timestamp": "2026-02-05T18:28:43.502239",
+        "total": 5,
+        "passed": 3,
+        "failed": 2,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 8.3
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 8.3
+          },
+          {
+            "test_id": 4,
+            "status": "PASS",
+            "input": "What is AI?",
+            "quality_score": 7.3
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 60.0,
+        "quality_score": 60.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0
+        },
+        "total_tests": 5,
+        "passed": 3,
+        "failed": 2,
+        "timestamp": "2026-02-05T18:28:43.502239",
+        "avg_response_quality": 8.4
+      }
+    },
+    "version_b": {
+      "prompt": "You are an AI assistant with search and calculator tools.\nKeep responses brief and accurate.",
+      "results": {
+        "timestamp": "2026-02-05T18:28:43.502282",
+        "total": 5,
+        "passed": 3,
+        "failed": 2,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 8.2
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 8.2
+          },
+          {
+            "test_id": 4,
+            "status": "PASS",
+            "input": "What is AI?",
+            "quality_score": 6.7
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 60.0,
+        "quality_score": 60.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0
+        },
+        "total_tests": 5,
+        "passed": 3,
+        "failed": 2,
+        "timestamp": "2026-02-05T18:28:43.502282",
+        "avg_response_quality": 8.24
+      }
+    },
+    "comparison": {
+      "success_rate_diff": 0.0,
+      "quality_score_diff": 0.0,
+      "winner": "tie",
+      "confidence": "low",
+      "improvement_percentage": 0.0
+    },
+    "winner": "tie"
+  },
+  "bc_comparison": {
+    "version_a": {
+      "prompt": "You are an AI assistant with search and calculator tools.\nKeep responses brief and accurate.",
+      "results": {
+        "timestamp": "2026-02-05T18:28:43.502333",
+        "total": 5,
+        "passed": 3,
+        "failed": 2,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 8.2
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 8.2
+          },
+          {
+            "test_id": 4,
+            "status": "PASS",
+            "input": "What is AI?",
+            "quality_score": 6.7
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 60.0,
+        "quality_score": 60.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0
+        },
+        "total_tests": 5,
+        "passed": 3,
+        "failed": 2,
+        "timestamp": "2026-02-05T18:28:43.502333",
+        "avg_response_quality": 8.24
+      }
+    },
+    "version_b": {
+      "prompt": "AI assistant with search and calculator.",
+      "results": {
+        "timestamp": "2026-02-05T18:28:43.502354",
+        "total": 5,
+        "passed": 3,
+        "failed": 2,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 8.2
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 8.2
+          },
+          {
+            "test_id": 4,
+            "status": "PASS",
+            "input": "What is AI?",
+            "quality_score": 6.7
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 60.0,
+        "quality_score": 60.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0
+        },
+        "total_tests": 5,
+        "passed": 3,
+        "failed": 2,
+        "timestamp": "2026-02-05T18:28:43.502354",
+        "avg_response_quality": 8.24
+      }
+    },
+    "comparison": {
+      "success_rate_diff": 0.0,
+      "quality_score_diff": 0.0,
+      "winner": "tie",
+      "confidence": "low",
+      "improvement_percentage": 0.0
+    },
+    "winner": "tie"
+  },
+  "ac_comparison": {
+    "version_a": {
+      "prompt": "You are an AI assistant with search and calculator tools.\nExample: For searches, provide comprehensive results.\nYou must ensure accuracy in all responses.",
+      "results": {
+        "timestamp": "2026-02-05T18:28:43.502387",
+        "total": 5,
+        "passed": 3,
+        "failed": 2,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 8.3
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 8.3
+          },
+          {
+            "test_id": 4,
+            "status": "PASS",
+            "input": "What is AI?",
+            "quality_score": 7.3
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 60.0,
+        "quality_score": 60.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0
+        },
+        "total_tests": 5,
+        "passed": 3,
+        "failed": 2,
+        "timestamp": "2026-02-05T18:28:43.502387",
+        "avg_response_quality": 8.4
+      }
+    },
+    "version_b": {
+      "prompt": "AI assistant with search and calculator.",
+      "results": {
+        "timestamp": "2026-02-05T18:28:43.502401",
+        "total": 5,
+        "passed": 3,
+        "failed": 2,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 8.2
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 8.2
+          },
+          {
+            "test_id": 4,
+            "status": "PASS",
+            "input": "What is AI?",
+            "quality_score": 6.7
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.05
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 60.0,
+        "quality_score": 60.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0
+        },
+        "total_tests": 5,
+        "passed": 3,
+        "failed": 2,
+        "timestamp": "2026-02-05T18:28:43.502401",
+        "avg_response_quality": 8.24
+      }
+    },
+    "comparison": {
+      "success_rate_diff": 0.0,
+      "quality_score_diff": 0.0,
+      "winner": "tie",
+      "confidence": "low",
+      "improvement_percentage": 0.0
+    },
+    "winner": "tie"
+  },
+  "summary": {
+    "A": 120.0,
+    "B": 120.0,
+    "C": 120.0
+  }
+}

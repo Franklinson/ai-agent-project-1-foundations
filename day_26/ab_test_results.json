@@ -1,0 +1,158 @@
+{
+  "version_a": {
+    "prompt": "You are a professional assistant with access to search, calculator, and API tools.\nProvide formal, detailed responses.",
+    "results": {
+      "timestamp": "2026-02-05T18:28:37.201831",
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "results": [
+        {
+          "test_id": 1,
+          "status": "PASS",
+          "input": "Search for Python tutorials",
+          "tool_used": "search",
+          "quality_score": 9.0
+        },
+        {
+          "test_id": 2,
+          "status": "PASS",
+          "input": "Calculate 6 * 7",
+          "tool_used": "calculator",
+          "quality_score": 8.5
+        },
+        {
+          "test_id": 3,
+          "status": "PASS",
+          "input": "Search for AI news",
+          "tool_used": "search",
+          "quality_score": 9.0
+        },
+        {
+          "test_id": 4,
+          "status": "PASS",
+          "input": "Get API data for user",
+          "tool_used": "api_call",
+          "quality_score": 8.8
+        },
+        {
+          "test_id": 5,
+          "status": "PASS",
+          "input": "Calculate square root of 16",
+          "tool_used": "calculator",
+          "quality_score": 8.5
+        },
+        {
+          "test_id": 6,
+          "status": "PASS",
+          "input": "Search for best practices",
+          "tool_used": "search",
+          "quality_score": 9.0
+        },
+        {
+          "test_id": 7,
+          "status": "PASS",
+          "input": "Get API status",
+          "tool_used": "api_call",
+          "quality_score": 8.8
+        }
+      ]
+    },
+    "metrics": {
+      "success_rate": 100.0,
+      "quality_score": 100.0,
+      "tool_accuracy": {
+        "search": 100.0,
+        "calculator": 100.0,
+        "api_call": 100.0
+      },
+      "total_tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "timestamp": "2026-02-05T18:28:37.201831",
+      "avg_response_quality": 8.8
+    }
+  },
+  "version_b": {
+    "prompt": "You are a helpful, casual assistant with search, calculator, and API tools.\nKeep responses friendly and concise.",
+    "results": {
+      "timestamp": "2026-02-05T18:28:37.218560",
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "results": [
+        {
+          "test_id": 1,
+          "status": "PASS",
+          "input": "Search for Python tutorials",
+          "tool_used": "search",
+          "quality_score": 8.5
+        },
+        {
+          "test_id": 2,
+          "status": "PASS",
+          "input": "Calculate 6 * 7",
+          "tool_used": "calculator",
+          "quality_score": 9.0
+        },
+        {
+          "test_id": 3,
+          "status": "PASS",
+          "input": "Search for AI news",
+          "tool_used": "search",
+          "quality_score": 8.5
+        },
+        {
+          "test_id": 4,
+          "status": "PASS",
+          "input": "Get API data for user",
+          "tool_used": "api_call",
+          "quality_score": 8.0
+        },
+        {
+          "test_id": 5,
+          "status": "PASS",
+          "input": "Calculate square root of 16",
+          "tool_used": "calculator",
+          "quality_score": 9.0
+        },
+        {
+          "test_id": 6,
+          "status": "PASS",
+          "input": "Search for best practices",
+          "tool_used": "search",
+          "quality_score": 8.5
+        },
+        {
+          "test_id": 7,
+          "status": "PASS",
+          "input": "Get API status",
+          "tool_used": "api_call",
+          "quality_score": 8.0
+        }
+      ]
+    },
+    "metrics": {
+      "success_rate": 100.0,
+      "quality_score": 100.0,
+      "tool_accuracy": {
+        "search": 100.0,
+        "calculator": 100.0,
+        "api_call": 100.0
+      },
+      "total_tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "timestamp": "2026-02-05T18:28:37.218560",
+      "avg_response_quality": 8.5
+    }
+  },
+  "comparison": {
+    "success_rate_diff": 0.0,
+    "quality_score_diff": 0.0,
+    "winner": "tie",
+    "confidence": "low",
+    "improvement_percentage": 0.0
+  },
+  "winner": "tie"
+}

@@ -1,0 +1,41 @@
+
+=== Prompt Iteration Workflow Report ===
+
+Total Iterations: 5
+Overall Improvement: +100.00%
+
+=== Best Version ===
+Iteration: 3 (v3_structured)
+Success Rate: 100.0%
+Quality Score: 100.0%
+Prompt: You are an AI assistant with search and calculator tools.
+Follow these steps:
+1. Understand the user...
+
+=== Progress ===
+First Iteration:
+  Success Rate: 0.0%
+  Quality Score: 0%
+
+Last Iteration:
+  Success Rate: 100.0%
+  Quality Score: 100.0%
+
+=== Iteration Details ===
+
+Iteration 1 (v1_basic):
+  Success: 0.0% | Quality: 0% | Performance: needs_improvement
+  Issues: 5 test(s) failed, search accuracy low (0.0%), calculator accuracy low (0.0%)
+
+Iteration 2 (v2_with_tools):
+  Success: 40.0% | Quality: 40.0% | Performance: needs_improvement
+  Issues: 3 test(s) failed, calculator accuracy low (0.0%)
+
+Iteration 3 (v3_structured):
+  Success: 100.0% | Quality: 100.0% | Performance: excellent
+
+Iteration 4 (v4_with_examples):
+  Success: 100.0% | Quality: 100.0% | Performance: excellent
+
+Iteration 5 (v5_complete):
+  Success: 100.0% | Quality: 100.0% | Performance: excellent

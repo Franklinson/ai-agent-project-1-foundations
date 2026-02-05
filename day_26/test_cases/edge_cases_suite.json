@@ -1,0 +1,115 @@
+{
+  "test_suite_name": "Edge Cases & Error Handling Test Suite",
+  "version": "1.0",
+  "description": "Test suite focused on edge cases and error scenarios",
+  "test_cases": [
+    {
+      "id": "edge_empty",
+      "category": "edge_case",
+      "scenario": "edge_case",
+      "input": "",
+      "expected": {
+        "error_handling": true,
+        "contains": "provide"
+      },
+      "description": "Empty input handling"
+    },
+    {
+      "id": "edge_single_char",
+      "category": "edge_case",
+      "scenario": "edge_case",
+      "input": "x",
+      "expected": {
+        "min_length": 5
+      },
+      "description": "Single character input"
+    },
+    {
+      "id": "edge_very_long",
+      "category": "edge_case",
+      "scenario": "edge_case",
+      "input": "Calculate the sum of all prime numbers between 1 and 1000000 and then multiply by the square root of 999999",
+      "expected": {
+        "tool": "calculator",
+        "error_handling": true
+      },
+      "description": "Very complex calculation"
+    },
+    {
+      "id": "error_div_zero",
+      "category": "error_handling",
+      "scenario": "error",
+      "input": "Calculate 100 / 0",
+      "expected": {
+        "error_handling": true,
+        "contains": "error"
+      },
+      "description": "Division by zero"
+    },
+    {
+      "id": "error_invalid_calc",
+      "category": "error_handling",
+      "scenario": "error",
+      "input": "Calculate abc + xyz",
+      "expected": {
+        "error_handling": true,
+        "contains": "invalid"
+      },
+      "description": "Invalid calculation syntax"
+    },
+    {
+      "id": "error_special_chars",
+      "category": "error_handling",
+      "scenario": "error",
+      "input": "Search for @#$%^&*()",
+      "expected": {
+        "tool": "search",
+        "min_length": 5
+      },
+      "description": "Special characters in search"
+    },
+    {
+      "id": "edge_negative",
+      "category": "edge_case",
+      "scenario": "edge_case",
+      "input": "Calculate -50 + -30",
+      "expected": {
+        "contains": "-80",
+        "tool": "calculator"
+      },
+      "description": "Negative number arithmetic"
+    },
+    {
+      "id": "edge_decimal",
+      "category": "edge_case",
+      "scenario": "edge_case",
+      "input": "Calculate 3.14 * 2.5",
+      "expected": {
+        "contains": "7.85",
+        "tool": "calculator"
+      },
+      "description": "Decimal arithmetic"
+    },
+    {
+      "id": "error_ambiguous",
+      "category": "error_handling",
+      "scenario": "error",
+      "input": "Calculate the meaning of life",
+      "expected": {
+        "error_handling": true
+      },
+      "description": "Ambiguous request"
+    },
+    {
+      "id": "edge_case_sensitive",
+      "category": "edge_case",
+      "scenario": "edge_case",
+      "input": "SEARCH FOR PYTHON",
+      "expected": {
+        "tool": "search",
+        "contains": "python"
+      },
+      "description": "Case sensitivity handling"
+    }
+  ]
+}

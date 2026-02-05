@@ -1,0 +1,16 @@
+
+=== Evaluation Metrics Report ===
+Timestamp: 2024-02-05T10:30:00
+
+Overall Performance:
+  Success Rate: 70.0%
+  Quality Score: 65.0%
+  Total Tests: 10
+  Passed: 7
+  Failed: 3
+  Avg Response Quality: 8.64
+
+Tool Accuracy:
+  search: 100.0%
+  calculator: 33.33%
+  api_call: 66.67%

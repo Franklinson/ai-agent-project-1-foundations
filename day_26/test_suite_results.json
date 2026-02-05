@@ -1,0 +1,225 @@
+{
+  "results": {
+    "timestamp": "2026-02-05T18:34:13.691391",
+    "total": 20,
+    "passed": 13,
+    "failed": 7,
+    "results": [
+      {
+        "test_id": "search_001",
+        "category": "search",
+        "scenario": "common",
+        "status": "PASS",
+        "input": "Search for Python documentation",
+        "tool_used": "search",
+        "quality_score": 8.5,
+        "description": "Basic search query for documentation"
+      },
+      {
+        "test_id": "search_002",
+        "category": "search",
+        "scenario": "common",
+        "status": "PASS",
+        "input": "Find information about machine learning",
+        "tool_used": "search",
+        "quality_score": 8.5,
+        "description": "General information search"
+      },
+      {
+        "test_id": "calc_001",
+        "category": "calculator",
+        "scenario": "common",
+        "status": "FAIL",
+        "input": "Calculate 25 * 4",
+        "tool_used": "calculator",
+        "quality_score": 4.0,
+        "description": "Basic multiplication"
+      },
+      {
+        "test_id": "calc_002",
+        "category": "calculator",
+        "scenario": "common",
+        "status": "FAIL",
+        "input": "What is 156 + 89?",
+        "tool_used": "calculator",
+        "quality_score": 4.0,
+        "description": "Basic addition"
+      },
+      {
+        "test_id": "calc_003",
+        "category": "calculator",
+        "scenario": "edge_case",
+        "status": "FAIL",
+        "input": "Calculate 0 / 5",
+        "tool_used": "calculator",
+        "quality_score": 4.0,
+        "description": "Division with zero numerator"
+      },
+      {
+        "test_id": "calc_004",
+        "category": "calculator",
+        "scenario": "error",
+        "status": "PASS",
+        "input": "Calculate 10 / 0",
+        "tool_used": "calculator",
+        "quality_score": 8.0,
+        "description": "Division by zero - should handle error gracefully"
+      },
+      {
+        "test_id": "api_001",
+        "category": "api",
+        "scenario": "common",
+        "status": "PASS",
+        "input": "Get user data for ID 12345",
+        "tool_used": "api_call",
+        "quality_score": 8.5,
+        "description": "Basic API data retrieval"
+      },
+      {
+        "test_id": "api_002",
+        "category": "api",
+        "scenario": "edge_case",
+        "status": "PASS",
+        "input": "Get user data for ID 0",
+        "tool_used": "api_call",
+        "quality_score": 8.0,
+        "description": "API call with edge case ID"
+      },
+      {
+        "test_id": "multi_001",
+        "category": "multi_step",
+        "scenario": "common",
+        "status": "PASS",
+        "input": "Search for the price of Bitcoin and calculate 5 times that amount",
+        "tool_used": "search",
+        "quality_score": 8.5,
+        "description": "Multi-step task requiring multiple tools"
+      },
+      {
+        "test_id": "text_001",
+        "category": "text_generation",
+        "scenario": "common",
+        "status": "FAIL",
+        "input": "Explain what AI is in simple terms",
+        "tool_used": null,
+        "quality_score": 8.0,
+        "description": "Text generation with constraints"
+      },
+      {
+        "test_id": "text_002",
+        "category": "text_generation",
+        "scenario": "common",
+        "status": "PASS",
+        "input": "List 5 programming languages",
+        "tool_used": null,
+        "quality_score": 8.5,
+        "description": "Structured list generation"
+      },
+      {
+        "test_id": "edge_001",
+        "category": "edge_case",
+        "scenario": "edge_case",
+        "status": "PASS",
+        "input": "",
+        "tool_used": null,
+        "quality_score": 5.0,
+        "description": "Empty input - should prompt for input"
+      },
+      {
+        "test_id": "edge_002",
+        "category": "edge_case",
+        "scenario": "edge_case",
+        "status": "PASS",
+        "input": "a",
+        "tool_used": null,
+        "quality_score": 6.5,
+        "description": "Single character input"
+      },
+      {
+        "test_id": "edge_003",
+        "category": "edge_case",
+        "scenario": "edge_case",
+        "status": "PASS",
+        "input": "Calculate the meaning of life",
+        "tool_used": "calculator",
+        "quality_score": 8.0,
+        "description": "Ambiguous calculation request"
+      },
+      {
+        "test_id": "error_001",
+        "category": "error_handling",
+        "scenario": "error",
+        "status": "FAIL",
+        "input": "Search for @#$%^&*()",
+        "tool_used": "search",
+        "quality_score": 8.5,
+        "description": "Special characters in search"
+      },
+      {
+        "test_id": "error_002",
+        "category": "error_handling",
+        "scenario": "error",
+        "status": "PASS",
+        "input": "Calculate abc + def",
+        "tool_used": "calculator",
+        "quality_score": 8.0,
+        "description": "Invalid calculation input"
+      },
+      {
+        "test_id": "complex_001",
+        "category": "complex",
+        "scenario": "common",
+        "status": "FAIL",
+        "input": "Search for Python tutorials, then calculate how many hours it takes to complete 10 tutorials if each takes 2.5 hours",
+        "tool_used": "search",
+        "quality_score": 8.5,
+        "description": "Complex multi-step reasoning"
+      },
+      {
+        "test_id": "context_001",
+        "category": "context",
+        "scenario": "common",
+        "status": "PASS",
+        "input": "What did I just ask you?",
+        "tool_used": null,
+        "quality_score": 7.5,
+        "description": "Context awareness test"
+      },
+      {
+        "test_id": "format_001",
+        "category": "formatting",
+        "scenario": "common",
+        "status": "PASS",
+        "input": "Format this as JSON: name is John, age is 30",
+        "tool_used": null,
+        "quality_score": 9.0,
+        "description": "Output formatting test"
+      },
+      {
+        "test_id": "perf_001",
+        "category": "performance",
+        "scenario": "common",
+        "status": "FAIL",
+        "input": "Calculate 999999 * 888888",
+        "tool_used": "calculator",
+        "quality_score": 4.0,
+        "description": "Large number calculation performance"
+      }
+    ],
+    "pass_rate": "65.0%"
+  },
+  "metrics": {
+    "success_rate": 65.0,
+    "quality_score": 65.0,
+    "tool_accuracy": {
+      "search": 60.0,
+      "calculator": 42.86,
+      "api_call": 100.0
+    },
+    "total_tests": 20,
+    "passed": 13,
+    "failed": 7,
+    "timestamp": "2026-02-05T18:34:13.691391",
+    "avg_response_quality": 7.17
+  }
+}

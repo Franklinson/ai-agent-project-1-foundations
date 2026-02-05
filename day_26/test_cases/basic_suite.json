@@ -1,0 +1,62 @@
+{
+  "test_suite_name": "Basic Agent Test Suite",
+  "version": "1.0",
+  "description": "Essential test cases for basic agent functionality",
+  "test_cases": [
+    {
+      "id": "basic_001",
+      "category": "search",
+      "scenario": "common",
+      "input": "Search for Python tutorials",
+      "expected": {
+        "contains": "tutorial",
+        "tool": "search"
+      },
+      "description": "Basic search functionality"
+    },
+    {
+      "id": "basic_002",
+      "category": "calculator",
+      "scenario": "common",
+      "input": "Calculate 10 + 5",
+      "expected": {
+        "contains": "15",
+        "tool": "calculator"
+      },
+      "description": "Basic addition"
+    },
+    {
+      "id": "basic_003",
+      "category": "calculator",
+      "scenario": "common",
+      "input": "Calculate 8 * 7",
+      "expected": {
+        "contains": "56",
+        "tool": "calculator"
+      },
+      "description": "Basic multiplication"
+    },
+    {
+      "id": "basic_004",
+      "category": "text",
+      "scenario": "common",
+      "input": "What is AI?",
+      "expected": {
+        "contains": "artificial",
+        "min_length": 20
+      },
+      "description": "Simple explanation"
+    },
+    {
+      "id": "basic_005",
+      "category": "api",
+      "scenario": "common",
+      "input": "Get user data",
+      "expected": {
+        "contains": "data",
+        "tool": "api_call"
+      },
+      "description": "Basic API call"
+    }
+  ]
+}

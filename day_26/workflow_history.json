@@ -1,0 +1,406 @@
+{
+  "total_iterations": 5,
+  "best_version": {
+    "iteration": 2,
+    "version": "v2",
+    "prompt": "You are an AI assistant.\nExample: For calculations, show your work.\nYou must verify all responses before returning them.",
+    "success_rate": 50.0,
+    "quality_score": 50.0
+  },
+  "first_iteration": {
+    "success_rate": 33.33,
+    "quality_score": 33.33
+  },
+  "last_iteration": {
+    "success_rate": 50.0,
+    "quality_score": 50.0
+  },
+  "overall_improvement": 16.67,
+  "iterations": [
+    {
+      "iteration": 1,
+      "version": "v1",
+      "prompt": "You are an AI assistant.",
+      "timestamp": "2026-02-05T18:31:07.506388",
+      "results": {
+        "timestamp": "2026-02-05T18:31:07.506329",
+        "total": 6,
+        "passed": 2,
+        "failed": 4,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 7.0
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 7.0
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 7.0
+          },
+          {
+            "test_id": 4,
+            "status": "FAIL",
+            "input": "Get API data",
+            "tool_used": "api_call",
+            "quality_score": 7.0
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 7.0
+          },
+          {
+            "test_id": 6,
+            "status": "FAIL",
+            "input": "General question",
+            "quality_score": 7.0
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 33.33,
+        "quality_score": 33.33,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0,
+          "api_call": 0.0
+        },
+        "total_tests": 6,
+        "passed": 2,
+        "failed": 4,
+        "timestamp": "2026-02-05T18:31:07.506329",
+        "avg_response_quality": 7.0
+      },
+      "analysis": {
+        "performance": "needs_improvement",
+        "issues": [
+          "4 test(s) failed",
+          "calculator accuracy low (0.0%)",
+          "api_call accuracy low (0.0%)"
+        ]
+      }
+    },
+    {
+      "iteration": 2,
+      "version": "v2",
+      "prompt": "You are an AI assistant.\nExample: For calculations, show your work.\nYou must verify all responses before returning them.",
+      "timestamp": "2026-02-05T18:31:07.506440",
+      "results": {
+        "timestamp": "2026-02-05T18:31:07.506404",
+        "total": 6,
+        "passed": 3,
+        "failed": 3,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 4,
+            "status": "FAIL",
+            "input": "Get API data",
+            "tool_used": "api_call",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 6,
+            "status": "PASS",
+            "input": "General question",
+            "quality_score": 9.0
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 50.0,
+        "quality_score": 50.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0,
+          "api_call": 0.0
+        },
+        "total_tests": 6,
+        "passed": 3,
+        "failed": 3,
+        "timestamp": "2026-02-05T18:31:07.506404",
+        "avg_response_quality": 9.0
+      },
+      "analysis": {
+        "performance": "needs_improvement",
+        "issues": [
+          "3 test(s) failed",
+          "calculator accuracy low (0.0%)",
+          "api_call accuracy low (0.0%)"
+        ]
+      }
+    },
+    {
+      "iteration": 3,
+      "version": "v3",
+      "prompt": "You are an AI assistant.\nExample: For calculations, show your work.\nYou must verify all responses before returning them.",
+      "timestamp": "2026-02-05T18:31:07.506478",
+      "results": {
+        "timestamp": "2026-02-05T18:31:07.506451",
+        "total": 6,
+        "passed": 3,
+        "failed": 3,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 4,
+            "status": "FAIL",
+            "input": "Get API data",
+            "tool_used": "api_call",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 6,
+            "status": "PASS",
+            "input": "General question",
+            "quality_score": 9.0
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 50.0,
+        "quality_score": 50.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0,
+          "api_call": 0.0
+        },
+        "total_tests": 6,
+        "passed": 3,
+        "failed": 3,
+        "timestamp": "2026-02-05T18:31:07.506451",
+        "avg_response_quality": 9.0
+      },
+      "analysis": {
+        "performance": "needs_improvement",
+        "issues": [
+          "3 test(s) failed",
+          "calculator accuracy low (0.0%)",
+          "api_call accuracy low (0.0%)"
+        ]
+      }
+    },
+    {
+      "iteration": 4,
+      "version": "v4",
+      "prompt": "You are an AI assistant.\nExample: For calculations, show your work.\nYou must verify all responses before returning them.",
+      "timestamp": "2026-02-05T18:31:07.506509",
+      "results": {
+        "timestamp": "2026-02-05T18:31:07.506487",
+        "total": 6,
+        "passed": 3,
+        "failed": 3,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 4,
+            "status": "FAIL",
+            "input": "Get API data",
+            "tool_used": "api_call",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 6,
+            "status": "PASS",
+            "input": "General question",
+            "quality_score": 9.0
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 50.0,
+        "quality_score": 50.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0,
+          "api_call": 0.0
+        },
+        "total_tests": 6,
+        "passed": 3,
+        "failed": 3,
+        "timestamp": "2026-02-05T18:31:07.506487",
+        "avg_response_quality": 9.0
+      },
+      "analysis": {
+        "performance": "needs_improvement",
+        "issues": [
+          "3 test(s) failed",
+          "calculator accuracy low (0.0%)",
+          "api_call accuracy low (0.0%)"
+        ]
+      }
+    },
+    {
+      "iteration": 5,
+      "version": "v5",
+      "prompt": "You are an AI assistant.\nExample: For calculations, show your work.\nYou must verify all responses before returning them.",
+      "timestamp": "2026-02-05T18:31:07.506538",
+      "results": {
+        "timestamp": "2026-02-05T18:31:07.506516",
+        "total": 6,
+        "passed": 3,
+        "failed": 3,
+        "results": [
+          {
+            "test_id": 1,
+            "status": "PASS",
+            "input": "Search for Python docs",
+            "tool_used": "search",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 2,
+            "status": "FAIL",
+            "input": "Calculate 10 + 5",
+            "tool_used": "calculator",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 3,
+            "status": "PASS",
+            "input": "Search for tutorials",
+            "tool_used": "search",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 4,
+            "status": "FAIL",
+            "input": "Get API data",
+            "tool_used": "api_call",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 5,
+            "status": "FAIL",
+            "input": "Calculate 20 * 3",
+            "tool_used": "calculator",
+            "quality_score": 9.0
+          },
+          {
+            "test_id": 6,
+            "status": "PASS",
+            "input": "General question",
+            "quality_score": 9.0
+          }
+        ]
+      },
+      "metrics": {
+        "success_rate": 50.0,
+        "quality_score": 50.0,
+        "tool_accuracy": {
+          "search": 100.0,
+          "calculator": 0.0,
+          "api_call": 0.0
+        },
+        "total_tests": 6,
+        "passed": 3,
+        "failed": 3,
+        "timestamp": "2026-02-05T18:31:07.506516",
+        "avg_response_quality": 9.0
+      },
+      "analysis": {
+        "performance": "needs_improvement",
+        "issues": [
+          "3 test(s) failed",
+          "calculator accuracy low (0.0%)",
+          "api_call accuracy low (0.0%)"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "input": "What is 2+2?",
+    "expected": {
+      "contains": "4",
+      "type": "math"
+    }
+  },
+  {
+    "input": "Explain AI in one sentence",
+    "expected": {
+      "max_words": 30,
+      "contains": "artificial intelligence"
+    }
+  },
+  {
+    "input": "List 3 colors",
+    "expected": {
+      "count": 3,
+      "type": "list"
+    }
+  }
+]

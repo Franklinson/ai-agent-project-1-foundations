@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-02-05T18:22:52.212232",
+  "total": 3,
+  "passed": 3,
+  "failed": 0,
+  "pass_rate": "100.0%",
+  "results": [
+    {
+      "test_id": 1,
+      "status": "PASS",
+      "input": "What is 2+2?",
+      "expected": {
+        "contains": "4",
+        "type": "math"
+      }
+    },
+    {
+      "test_id": 2,
+      "status": "PASS",
+      "input": "Explain AI in one sentence",
+      "expected": {
+        "max_words": 30,
+        "contains": "artificial intelligence"
+      }
+    },
+    {
+      "test_id": 3,
+      "status": "PASS",
+      "input": "List 3 colors",
+      "expected": {
+        "count": 3,
+        "type": "list"
+      }
+    }
+  ]
+}

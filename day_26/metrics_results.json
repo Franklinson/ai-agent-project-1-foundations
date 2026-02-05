@@ -1,0 +1,14 @@
+{
+  "success_rate": 70.0,
+  "quality_score": 65.0,
+  "tool_accuracy": {
+    "search": 100.0,
+    "calculator": 33.33,
+    "api_call": 66.67
+  },
+  "total_tests": 10,
+  "passed": 7,
+  "failed": 3,
+  "timestamp": "2024-02-05T10:30:00",
+  "avg_response_quality": 8.64
+}

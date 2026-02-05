@@ -1,0 +1,16 @@
+
+=== Evaluation Metrics Report ===
+Timestamp: 2026-02-05T18:24:59.204374
+
+Overall Performance:
+  Success Rate: 100.0%
+  Quality Score: 100.0%
+  Total Tests: 5
+  Passed: 5
+  Failed: 0
+  Avg Response Quality: 8.6
+
+Tool Accuracy:
+  search: 100.0%
+  calculator: 100.0%
+  api_call: 100.0%
