@@ -1,0 +1,909 @@
+{
+  "timestamp": "2026-02-12T00:37:20.184853",
+  "perception_tests": {
+    "passed": 7,
+    "failed": 11,
+    "details": [
+      {
+        "case_id": "common_001",
+        "input": "What is the weather today?",
+        "expected_intent": "question",
+        "actual_intent": "question",
+        "intent_correct": true,
+        "entities_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_002",
+        "input": "Calculate 15 + 25",
+        "expected_intent": "request",
+        "actual_intent": "unknown",
+        "intent_correct": false,
+        "entities_correct": false,
+        "passed": false
+      },
+      {
+        "case_id": "common_003",
+        "input": "What time is it?",
+        "expected_intent": "question",
+        "actual_intent": "question",
+        "intent_correct": true,
+        "entities_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_004",
+        "input": "Search for Python tutorials",
+        "expected_intent": "request",
+        "actual_intent": "unknown",
+        "intent_correct": false,
+        "entities_correct": true,
+        "passed": false
+      },
+      {
+        "case_id": "common_005",
+        "input": "Hello, how are you?",
+        "expected_intent": "greeting",
+        "actual_intent": "question",
+        "intent_correct": false,
+        "entities_correct": true,
+        "passed": false
+      },
+      {
+        "case_id": "edge_001",
+        "input": "",
+        "expected_intent": "unknown",
+        "actual_intent": "unknown",
+        "intent_correct": true,
+        "entities_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_002",
+        "input": "This is a very long input that contains multiple sentences and should test how the agent handles complex multi-part requests with various intents mixed together including questions, commands, and requests all in one message.",
+        "expected_intent": "question",
+        "actual_intent": "question",
+        "intent_correct": true,
+        "entities_correct": false,
+        "passed": false
+      },
+      {
+        "case_id": "edge_003",
+        "input": "!@#$%^&*()_+-=[]{}|;':\",./<>?",
+        "expected_intent": "unknown",
+        "actual_intent": "question",
+        "intent_correct": false,
+        "entities_correct": true,
+        "passed": false
+      },
+      {
+        "case_id": "edge_004",
+        "input": "Hello, \u00bfc\u00f3mo est\u00e1s? \u4f60\u597d",
+        "expected_intent": "greeting",
+        "actual_intent": "question",
+        "intent_correct": false,
+        "entities_correct": true,
+        "passed": false
+      },
+      {
+        "case_id": "edge_005",
+        "input": "Send email to john@example.com about meeting on 12/25/2024 at 3:30 PM with 5 people",
+        "expected_intent": "command",
+        "actual_intent": "unknown",
+        "intent_correct": false,
+        "entities_correct": true,
+        "passed": false
+      },
+      {
+        "case_id": "error_001",
+        "input": "Calculate 10 / 0",
+        "expected_intent": "request",
+        "actual_intent": "unknown",
+        "intent_correct": false,
+        "entities_correct": false,
+        "passed": false
+      },
+      {
+        "case_id": "error_002",
+        "input": "Please do something undefined and impossible",
+        "expected_intent": "request",
+        "actual_intent": "request",
+        "intent_correct": true,
+        "entities_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "error_003",
+        "input": "Search for nonexistent_tool_test",
+        "expected_intent": "request",
+        "actual_intent": "unknown",
+        "intent_correct": false,
+        "entities_correct": true,
+        "passed": false
+      },
+      {
+        "case_id": "type_001",
+        "input": "12345",
+        "expected_intent": "unknown",
+        "actual_intent": "unknown",
+        "intent_correct": true,
+        "entities_correct": false,
+        "passed": false
+      },
+      {
+        "case_id": "type_002",
+        "input": "https://www.example.com",
+        "expected_intent": "unknown",
+        "actual_intent": "unknown",
+        "intent_correct": true,
+        "entities_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_003",
+        "input": "user@domain.com",
+        "expected_intent": "unknown",
+        "actual_intent": "unknown",
+        "intent_correct": true,
+        "entities_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_004",
+        "input": "12/31/2024",
+        "expected_intent": "unknown",
+        "actual_intent": "unknown",
+        "intent_correct": true,
+        "entities_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_005",
+        "input": "CREATE TABLE users (id INT, name VARCHAR(50))",
+        "expected_intent": "command",
+        "actual_intent": "command",
+        "intent_correct": true,
+        "entities_correct": false,
+        "passed": false
+      }
+    ],
+    "accuracy": 0.3888888888888889
+  },
+  "reasoning_tests": {
+    "passed": 10,
+    "failed": 8,
+    "details": [
+      {
+        "case_id": "common_001",
+        "has_plan": true,
+        "expected_tools": [
+          "search_tool"
+        ],
+        "planned_tools": [
+          "search_tool"
+        ],
+        "tools_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_002",
+        "has_plan": true,
+        "expected_tools": [
+          "calculator"
+        ],
+        "planned_tools": [
+          "fallback_tool",
+          "entity_processor"
+        ],
+        "tools_match": false,
+        "passed": false
+      },
+      {
+        "case_id": "common_003",
+        "has_plan": true,
+        "expected_tools": [
+          "time"
+        ],
+        "planned_tools": [
+          "search_tool"
+        ],
+        "tools_match": false,
+        "passed": false
+      },
+      {
+        "case_id": "common_004",
+        "has_plan": true,
+        "expected_tools": [
+          "search"
+        ],
+        "planned_tools": [
+          "fallback_tool"
+        ],
+        "tools_match": false,
+        "passed": false
+      },
+      {
+        "case_id": "common_005",
+        "has_plan": true,
+        "expected_tools": [
+          "response_tool"
+        ],
+        "planned_tools": [
+          "search_tool"
+        ],
+        "tools_match": false,
+        "passed": false
+      },
+      {
+        "case_id": "edge_001",
+        "has_plan": true,
+        "expected_tools": [
+          "fallback_tool"
+        ],
+        "planned_tools": [
+          "fallback_tool"
+        ],
+        "tools_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_002",
+        "has_plan": true,
+        "expected_tools": [
+          "search_tool",
+          "entity_processor"
+        ],
+        "planned_tools": [
+          "search_tool"
+        ],
+        "tools_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_003",
+        "has_plan": true,
+        "expected_tools": [
+          "fallback_tool"
+        ],
+        "planned_tools": [
+          "search_tool"
+        ],
+        "tools_match": false,
+        "passed": false
+      },
+      {
+        "case_id": "edge_004",
+        "has_plan": true,
+        "expected_tools": [
+          "response_tool"
+        ],
+        "planned_tools": [
+          "search_tool"
+        ],
+        "tools_match": false,
+        "passed": false
+      },
+      {
+        "case_id": "edge_005",
+        "has_plan": true,
+        "expected_tools": [
+          "execution_tool",
+          "entity_processor"
+        ],
+        "planned_tools": [
+          "fallback_tool",
+          "entity_processor"
+        ],
+        "tools_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "error_001",
+        "has_plan": true,
+        "expected_tools": [
+          "calculator"
+        ],
+        "planned_tools": [
+          "fallback_tool",
+          "entity_processor"
+        ],
+        "tools_match": false,
+        "passed": false
+      },
+      {
+        "case_id": "error_002",
+        "has_plan": true,
+        "expected_tools": [
+          "assistant_tool"
+        ],
+        "planned_tools": [
+          "assistant_tool"
+        ],
+        "tools_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "error_003",
+        "has_plan": true,
+        "expected_tools": [
+          "search"
+        ],
+        "planned_tools": [
+          "fallback_tool"
+        ],
+        "tools_match": false,
+        "passed": false
+      },
+      {
+        "case_id": "type_001",
+        "has_plan": true,
+        "expected_tools": [
+          "fallback_tool"
+        ],
+        "planned_tools": [
+          "fallback_tool",
+          "entity_processor"
+        ],
+        "tools_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_002",
+        "has_plan": true,
+        "expected_tools": [
+          "fallback_tool"
+        ],
+        "planned_tools": [
+          "fallback_tool"
+        ],
+        "tools_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_003",
+        "has_plan": true,
+        "expected_tools": [
+          "fallback_tool",
+          "entity_processor"
+        ],
+        "planned_tools": [
+          "fallback_tool",
+          "entity_processor"
+        ],
+        "tools_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_004",
+        "has_plan": true,
+        "expected_tools": [
+          "fallback_tool",
+          "entity_processor"
+        ],
+        "planned_tools": [
+          "fallback_tool",
+          "entity_processor"
+        ],
+        "tools_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_005",
+        "has_plan": true,
+        "expected_tools": [
+          "execution_tool"
+        ],
+        "planned_tools": [
+          "execution_tool",
+          "entity_processor"
+        ],
+        "tools_match": true,
+        "passed": true
+      }
+    ],
+    "quality_score": 0.5555555555555556
+  },
+  "tool_tests": {
+    "passed": 18,
+    "failed": 0,
+    "details": [
+      {
+        "case_id": "common_001",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "common_002",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 2,
+        "passed": true
+      },
+      {
+        "case_id": "common_003",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "common_004",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "common_005",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "edge_001",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "edge_002",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "edge_003",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "edge_004",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "edge_005",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 2,
+        "passed": true
+      },
+      {
+        "case_id": "error_001",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 2,
+        "passed": true
+      },
+      {
+        "case_id": "error_002",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "error_003",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "type_001",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 2,
+        "passed": true
+      },
+      {
+        "case_id": "type_002",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 1,
+        "passed": true
+      },
+      {
+        "case_id": "type_003",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 2,
+        "passed": true
+      },
+      {
+        "case_id": "type_004",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 2,
+        "passed": true
+      },
+      {
+        "case_id": "type_005",
+        "has_results": true,
+        "success_rate": 1.0,
+        "action_count": 2,
+        "passed": true
+      }
+    ],
+    "usage_score": 1.0
+  },
+  "observation_tests": {
+    "passed": 15,
+    "failed": 3,
+    "details": [
+      {
+        "case_id": "common_001",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_002",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_003",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_004",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_005",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_001",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_002",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_003",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_004",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_005",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "error_001",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "error",
+        "actual_decision": "complete",
+        "decision_correct": false,
+        "passed": false
+      },
+      {
+        "case_id": "error_002",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "continue",
+        "actual_decision": "complete",
+        "decision_correct": false,
+        "passed": false
+      },
+      {
+        "case_id": "error_003",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "continue",
+        "actual_decision": "complete",
+        "decision_correct": false,
+        "passed": false
+      },
+      {
+        "case_id": "type_001",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_002",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_003",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_004",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_005",
+        "has_evaluation": true,
+        "has_reflection": true,
+        "has_decision": true,
+        "expected_outcome": "complete",
+        "actual_decision": "complete",
+        "decision_correct": true,
+        "passed": true
+      }
+    ],
+    "accuracy_score": 0.8333333333333334
+  },
+  "complete_loop_tests": {
+    "passed": 18,
+    "failed": 0,
+    "details": [
+      {
+        "case_id": "common_001",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_002",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_003",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_004",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "common_005",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_001",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_002",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_003",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_004",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "edge_005",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "error_001",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "error_002",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "error_003",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_001",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_002",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_003",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_004",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      },
+      {
+        "case_id": "type_005",
+        "completed": true,
+        "iterations": 1,
+        "termination_reason": "goal_achieved",
+        "reasonable_iterations": true,
+        "valid_termination": true,
+        "passed": true
+      }
+    ],
+    "operation_score": 1.0
+  },
+  "summary": {
+    "total_tests": 90,
+    "total_passed": 68,
+    "total_failed": 22,
+    "overall_score": 0.7555555555555555,
+    "category_scores": {
+      "perception_tests": 0.0,
+      "reasoning_tests": 0.5555555555555556,
+      "tool_tests": 1.0,
+      "observation_tests": 0.8333333333333334,
+      "complete_loop_tests": 1.0
+    },
+    "grade": "C"
+  }
+}

@@ -1,0 +1,68 @@
+======================================================================
+AI AGENT PERFORMANCE EVALUATION REPORT
+======================================================================
+Generated: 2026-02-12T00:40:15.856212
+
+======================================================================
+SUCCESS METRICS
+======================================================================
+Overall Success Rate: 100.00%
+Completed Tests: 18/18
+Failed Tests: 0/18
+
+======================================================================
+QUALITY METRICS
+======================================================================
+Average Quality Score: 100.00%
+High Quality Rate: 100.00%
+Low Quality Rate: 0.00%
+
+Quality Distribution:
+  High Quality: 18 tests
+  Medium Quality: 0 tests
+  Low Quality: 0 tests
+
+======================================================================
+EFFICIENCY METRICS
+======================================================================
+Average Iterations: 1.00
+Min Iterations: 1
+Max Iterations: 1
+Total Iterations: 18
+Efficiency Score: 80.00%
+
+Termination Reasons:
+  goal_achieved: 18
+
+======================================================================
+TOOL USAGE METRICS
+======================================================================
+Total Tool Calls: 450
+Unique Tools Used: 5
+Most Used Tool: fallback_tool
+
+Tool Call Distribution:
+  fallback_tool: 180 calls (100.0% success)
+  entity_processor: 126 calls (100.0% success)
+  search_tool: 108 calls (100.0% success)
+  assistant_tool: 18 calls (100.0% success)
+  execution_tool: 18 calls (100.0% success)
+
+======================================================================
+ERROR METRICS
+======================================================================
+Total Errors: 0
+Average Errors per Test: 0.00
+Error Rate: 0.00
+
+Errors by Phase:
+
+======================================================================
+OVERALL ASSESSMENT
+======================================================================
+Overall Performance Score: 96.00%
+Grade: A (Excellent)
+
+Assessment: Excellent performance across all metrics. Agent is production-ready.
+
+======================================================================

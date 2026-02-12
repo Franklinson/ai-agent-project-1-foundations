@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-02-12T00:40:15.856212",
+  "success_metrics": {
+    "overall": 1.0,
+    "completed": 1.0,
+    "failed": 0.0,
+    "total_tests": 18,
+    "completed_count": 18,
+    "failed_count": 0
+  },
+  "quality_metrics": {
+    "average_quality": 1.0,
+    "high_quality": 1.0,
+    "low_quality": 0.0,
+    "quality_distribution": {
+      "high": 18,
+      "medium": 0,
+      "low": 0
+    }
+  },
+  "efficiency_metrics": {
+    "avg_iterations": 1.0,
+    "min_iterations": 1,
+    "max_iterations": 1,
+    "total_iterations": 18,
+    "efficiency_score": 0.8,
+    "termination_reasons": {
+      "goal_achieved": 18
+    }
+  },
+  "tool_usage_metrics": {
+    "total_tool_calls": 450,
+    "unique_tools_used": 5,
+    "tool_calls": {
+      "search_tool": 108,
+      "fallback_tool": 180,
+      "entity_processor": 126,
+      "assistant_tool": 18,
+      "execution_tool": 18
+    },
+    "tool_success_rates": {
+      "search_tool": 1.0,
+      "fallback_tool": 1.0,
+      "entity_processor": 1.0,
+      "assistant_tool": 1.0,
+      "execution_tool": 1.0
+    },
+    "most_used_tool": "fallback_tool",
+    "tool_failures": {}
+  },
+  "error_metrics": {
+    "total_errors": 0,
+    "avg_errors_per_test": 0.0,
+    "error_phases": {},
+    "error_rate": 0.0
+  }
+}

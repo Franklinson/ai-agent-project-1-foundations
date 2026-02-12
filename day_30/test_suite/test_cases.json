@@ -1,0 +1,154 @@
+{
+  "common_use_cases": [
+    {
+      "id": "common_001",
+      "name": "Simple Question",
+      "input": "What is the weather today?",
+      "expected_intent": "question",
+      "expected_tools": ["search_tool"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "common_002", 
+      "name": "Calculation Request",
+      "input": "Calculate 15 + 25",
+      "expected_intent": "request",
+      "expected_tools": ["calculator"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "common_003",
+      "name": "Time Query",
+      "input": "What time is it?",
+      "expected_intent": "question",
+      "expected_tools": ["time"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "common_004",
+      "name": "Search Request",
+      "input": "Search for Python tutorials",
+      "expected_intent": "request",
+      "expected_tools": ["search"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "common_005",
+      "name": "Greeting",
+      "input": "Hello, how are you?",
+      "expected_intent": "greeting",
+      "expected_tools": ["response_tool"],
+      "expected_outcome": "complete"
+    }
+  ],
+  "edge_cases": [
+    {
+      "id": "edge_001",
+      "name": "Empty Input",
+      "input": "",
+      "expected_intent": "unknown",
+      "expected_tools": ["fallback_tool"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "edge_002",
+      "name": "Very Long Input",
+      "input": "This is a very long input that contains multiple sentences and should test how the agent handles complex multi-part requests with various intents mixed together including questions, commands, and requests all in one message.",
+      "expected_intent": "question",
+      "expected_tools": ["search_tool", "entity_processor"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "edge_003",
+      "name": "Special Characters",
+      "input": "!@#$%^&*()_+-=[]{}|;':\",./<>?",
+      "expected_intent": "unknown",
+      "expected_tools": ["fallback_tool"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "edge_004",
+      "name": "Mixed Language",
+      "input": "Hello, ¿cómo estás? 你好",
+      "expected_intent": "greeting",
+      "expected_tools": ["response_tool"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "edge_005",
+      "name": "Multiple Entities",
+      "input": "Send email to john@example.com about meeting on 12/25/2024 at 3:30 PM with 5 people",
+      "expected_intent": "command",
+      "expected_tools": ["execution_tool", "entity_processor"],
+      "expected_outcome": "complete"
+    }
+  ],
+  "error_scenarios": [
+    {
+      "id": "error_001",
+      "name": "Invalid Calculation",
+      "input": "Calculate 10 / 0",
+      "expected_intent": "request",
+      "expected_tools": ["calculator"],
+      "expected_outcome": "error"
+    },
+    {
+      "id": "error_002",
+      "name": "Malformed Request",
+      "input": "Please do something undefined and impossible",
+      "expected_intent": "request",
+      "expected_tools": ["assistant_tool"],
+      "expected_outcome": "continue"
+    },
+    {
+      "id": "error_003",
+      "name": "Tool Failure Simulation",
+      "input": "Search for nonexistent_tool_test",
+      "expected_intent": "request",
+      "expected_tools": ["search"],
+      "expected_outcome": "continue"
+    }
+  ],
+  "different_input_types": [
+    {
+      "id": "type_001",
+      "name": "Numeric Input",
+      "input": "12345",
+      "expected_intent": "unknown",
+      "expected_tools": ["fallback_tool"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "type_002",
+      "name": "URL Input",
+      "input": "https://www.example.com",
+      "expected_intent": "unknown",
+      "expected_tools": ["fallback_tool"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "type_003",
+      "name": "Email Input",
+      "input": "user@domain.com",
+      "expected_intent": "unknown",
+      "expected_tools": ["fallback_tool", "entity_processor"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "type_004",
+      "name": "Date Input",
+      "input": "12/31/2024",
+      "expected_intent": "unknown",
+      "expected_tools": ["fallback_tool", "entity_processor"],
+      "expected_outcome": "complete"
+    },
+    {
+      "id": "type_005",
+      "name": "Command Style",
+      "input": "CREATE TABLE users (id INT, name VARCHAR(50))",
+      "expected_intent": "command",
+      "expected_tools": ["execution_tool"],
+      "expected_outcome": "complete"
+    }
+  ]
+}
